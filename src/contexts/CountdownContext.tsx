@@ -43,19 +43,19 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
     setIsActive(false);
     setHasFinished(false);
     setTime(0.1 * 60);
-
-    useEffect(() => {
-      if (isActive && time > 0) {
-        countdownTimeout = setTimeout(() => {
-          setTime(time - 1);
-        }, 1000);
-      } else if (isActive && time === 0) {
-        setHasFinished(true);
-        setIsActive(false);
-        startNewChallenge();
-      }
-    }, [isActive, time]);
   }
+
+  useEffect(() => {
+    if (isActive && time > 0) {
+      countdownTimeout = setTimeout(() => {
+        setTime(time - 1);
+      }, 1000);
+    } else if (isActive && time === 0) {
+      setHasFinished(true);
+      setIsActive(false);
+      startNewChallenge();
+    }
+  }, [isActive, time]);
 
   return (
     <CountdownContext.Provider
