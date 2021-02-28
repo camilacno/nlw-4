@@ -1,38 +1,41 @@
-.ChallengeBoxContainer {
-  align-items: center;
+.challengeBoxContainer {
+  height: 100%;
+
   background: var(--white);
   border-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 2rem;
+
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-items: center;
   justify-content: center;
-  padding: 1.5rem 2rem;
+
   text-align: center;
 }
 
-.ChallengeNotActive {
+.challengNotActive {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 
-.ChallengeNotActive strong {
+.challengeNotActive strong {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.4;
 }
 
-.ChallengeNotActive p {
-  align-items: center;
+.challengeNotActive p {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   line-height: 1.4;
-  max-width: 70%;
-  margin-top: 3rem !important;
+  margin-top: 3rem;
 }
 
-.ChallengeNotActive p img {
+.challengeNotActive p img {
   margin-bottom: 1rem;
 }
 
@@ -49,11 +52,11 @@
 }
 
 .challengeActive header {
-  width: 80%;
+  width: 90%;
   color: var(--blue);
   font-weight: 600;
   font-size: 1.25rem;
-  padding: 1.5rem 2rem 1.5rem;
+  padding: 0 2rem 1.5rem;
   border-bottom: 1px solid var(--gray-line);
   text-align: center;
 }
@@ -78,7 +81,6 @@
 }
 
 .challengeActive footer {
-  padding: 1.5rem;
   width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr;
